@@ -102,5 +102,13 @@ JavaScript는 인터프리터 언어로 JIT(Just-In-Time)컴파일러 도입 등
 1. 활성화 객체 (Activation Object)
 2. 전역 객체(Global Object)
 
-#### 반복문과 성능
+## 반복문과 성능
 for, for-in, while, do-while 구문에도 성능 차이가 있음.
+
+## 효율적인 알고리즘 구현을 통한 성능
+
+## 조건문과 성능
+
+## 문자열 연산과 성능
+
+## 정규표현식과 성능
