@@ -141,3 +141,33 @@ for, for-in, while, do-while 구문에도 성능 차이가 있음.
 innerHTML 횟수는 최소한으로 하는 것이 좋다.
 브라우저는 갱신할 때마다 렌더링을 거치게 되기 때문이다.
 (*브라우저가 웹을 그리는 법)
+
+### 참조
+참조 횟수를 최소한으로 줄이는 것이 좋다.
+* 아래의 코드는 Clean Code에서 오래된 브라우저가 아니면 캐싱처리되어 상관없다고는 함.
+```javascript
+// loop를 돌 때마다 array 참조가 일어남.
+for(let i=0; i < arr.length; i++) {
+  ....
+}
+const l = arr.length;
+for(let i=0; i < l; i++) {
+...
+}
+```
+
+### try/catch
+try/catch 구문안에 있는 코드는 컴파일러가 최적화하지 못한다.
+성능에 민감한 함수들은 도우미 함수를 생성하는 것이 좋다.
+```javascript
+function heler_func() {
+  ....
+}
+
+try{
+  ...
+  helper_func();
+  ...
+} catch(e) {
+  ...
+}
