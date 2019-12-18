@@ -171,3 +171,31 @@ try{
 } catch(e) {
   ...
 }
+
+## 이론
+### 1. 지역변수를 정의하라
+변수가 참조될 때, JavaScript는 Scope chain내의 다른 멤버들을 돌면서 해당변수를 찾습니다.
+sopce Chain은 현재 scop내에서 사용 가능한 변수들의 모음이고, 대부분의 브라우저는 이것은 최소 두 가지 이상의 항목으로 구성하고 있다.
+하나는 지역 변수들의 집합, 다른 하나는 전역변수들의 집합이다.
+
+이 때 엔진이 탐색해야할 scope chain의 깊이가 깊을 수록, 작업 시간이 더 오래 걸리게 될 것이다.
+엔진은 먼저 function의 인자인 this로 시작하는 지역변수들부터 찾는다.
+그 다음에 지역적으로 정의된 변수들을 찾고, 그 후에 전역 변수들을 찾는 것을 반복합니다.
+이 chain 내에는 지역변수가 우선이기 때문에 그들은 항상 전역 변수보다 더 빠르게 발견된다.
+#### 결론 : 한 번 이상 전역변수를 사용할 때는 항상 지역적으로 재정의를 해야함.
+```javascript
+//ex
+var blah = document.getElementById('MyID'), 
+  blah2 = document.getElementById('myID2')
+
+const doc = document, 
+  blah = doc.getElementById('MyID'), 
+  balh2 = doc.getElementById('MyID2');
+```
+
+### 2.with()문을 사용하지마세요
+JavaScript엔진이 변수들을 돌 때, 먼저 with()변수들을 돌고, 다음에 지역 변수를 돌고, 다음으로 전역변수를 돌게 된다
+본질적으로 with()는 지역변수들에게 전역변수가 갖는 모든 단점을 가지게 만든다.
+JavaScript 최적화를 막는 요인이된다.
+
+### 3.closure 사용을 아껴라.
