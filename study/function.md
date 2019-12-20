@@ -1,7 +1,9 @@
 # 목차
-[String](# 1.String)
-[Array](# 2.Array)
-[Object](# 3.Object)
+[String](#1.String)
+
+[Array](#2.Array)
+
+[Object](#3.Object)
 
 
 # 1.String
@@ -188,6 +190,36 @@ function isEmpty(obj) {
     return true;
 }
 ```
+
+## map
+key-value 형태로 key는 중복되지 않는 특징
+```javascript
+let map = new Map();
+map.set('name', 'soobean');
+map.set('age', 28);
+map.set('age', 29);
+console.log(map);
+
+```
+
+## set
+중복값을 가지지 않음.
+
+## foreach
+Object를 제외한 Array, Map,Set에서 사용가능.
+
+## for in
+Array, Object 사용가능
+내부적으로 객체의 Enumerable속성이 true로 설정된 속성들만 접근 가능하기 때문임.
+객체의 속성을 순회하기 위한 구문
+
+## for of
+Object를 제외한 Array, Map,Set에서 사용가능.
+Array와 Set은 값을 출력했고 Map의 경우는 key,value값을 출력함.
+컬렉션 전용. 객체 기준이라기 보다 symbol.iterator속성이 있는 모든 컬렉션 요소에 대해 반복함.
+객체의 속성들을 순회하기 위한 
+
+## callback ?
 
 # Tip
 JavaScript에서 자료형 false 반환은 "", null, undefined, 0, NaN
