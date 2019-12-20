@@ -1,5 +1,4 @@
-[[toc]]
------
+[toc]
 
 # 1.String
 ## Split()
