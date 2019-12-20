@@ -206,7 +206,14 @@ console.log(map);
 중복값을 가지지 않음.
 
 ## foreach
-Object를 제외한 Array, Map,Set에서 사용가능.
+Object를 제외한 Array, Map,Set에서 사용가능
+
+callback함수를 등록하여 배열의 인덱스와 값에 접근할 수 있다.
+```javascript
+arr.forEach(function(item,index.arr2){
+ console.log(item,index,arr2[index+1]);
+})
+```
 
 ## for in
 Array, Object 사용가능
@@ -221,7 +228,8 @@ Object를 제외한 Array, Map,Set에서 사용가능.
 Array와 Set은 값을 출력했고 Map의 경우는 key,value값을 출력함.
 
 컬렉션 전용. 객체 기준이라기 보다 symbol.iterator속성이 있는 모든 컬렉션 요소에 대해 반복함.
-객체의 속성들을 순회하기 위한 
+
+객체의 속성들을 순회하기 위한 구문
 
 ## callback ?
 
