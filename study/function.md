@@ -130,7 +130,15 @@ const latestSearch = data.findIndex((item)=>{return item.title === "latest"})
 ## Splice
 배열 요소 추가/삭제
 
+함수 인자를 3개받음.
+```javascript
+//ex 
+//추가
+splice(index, position, value)
 
+//삭제
+splice(index,position)
+```
 
 # 3.Object
 ## 객체 병합(merge)
@@ -208,12 +216,16 @@ console.log(map);
 ## foreach
 Object를 제외한 Array, Map,Set에서 사용가능
 
+배열 요소마다 한번씩 주어진 함수를 실행
+
 callback함수를 등록하여 배열의 인덱스와 값에 접근할 수 있다.
 ```javascript
 arr.forEach(function(item,index.arr2){
  console.log(item,index,arr2[index+1]);
 })
 ```
+* foreach와 map차이 : map은 새로운 배열을 반환하고, foreach는 undefined를 반환하지 않음. 
+
 
 ## for in
 Array, Object 사용가능
@@ -230,6 +242,11 @@ Array와 Set은 값을 출력했고 Map의 경우는 key,value값을 출력함.
 컬렉션 전용. 객체 기준이라기 보다 symbol.iterator속성이 있는 모든 컬렉션 요소에 대해 반복함.
 
 객체의 속성들을 순회하기 위한 구문
+
+
+### reduce()
+splice-forEach를 통해 만들어진 새로운 배열들을 초기값 으로 받아 사용함.
+
 
 ## callback ?
 
