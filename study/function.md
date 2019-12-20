@@ -1,4 +1,8 @@
-[toc]
+# 목차
+[String](# 1.String)
+[Array](# 2.Array)
+[Object](# 3.Object)
+
 
 # 1.String
 ## Split()
@@ -14,7 +18,7 @@
 문자열 좌우에서 공백을 제거하는 함수
 
 
-# Array
+# 2.Array
 ## map()
 key-value pair로 이뤄진 컬렉션
 
@@ -126,7 +130,7 @@ const latestSearch = data.findIndex((item)=>{return item.title === "latest"})
 
 
 
-# Object
+# 3.Object
 ## 객체 병합(merge)
 
 ```javascript
