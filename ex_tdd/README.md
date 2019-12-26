@@ -43,3 +43,7 @@ exports.max = numbers => Math.max(...numbers);
 ```
 
 이런 절차로 다음 테스트 케이스를 진행한다.
+
+\*\* describe 내부에서 또 describe를 쓸 수 있다. (단, it 내부에 또다른 it나 describe를 쓸 수는 없다.)
+
+toEqual는 객체 또는 배열을 비교해야하는 상황에서 사용함.
