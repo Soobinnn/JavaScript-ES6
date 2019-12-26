@@ -2,11 +2,11 @@
 
 0. yarn init -y
 
-1. yarn add jest
+1. yarn add --dev jest
 
 \*\* VS Code를 사용한다면, @types/jest를 설치하면 VS Code에서 인텔리센스 지원을 받을 수 있다.
 
-2. yarn add @types/jest
+2. yarn add --dev @types/jest
 
 3. test케이스 작성
 
